@@ -23,7 +23,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <img
-                src="src/assets/1-transparent.png"
+                src="public\assets\1-transparent.png"
                 alt="Snaps & Scenes"
                 className="h-40 w-auto md:h-48 -mt-4" // ✅ Bigger logo
               />
