@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 54 85% 91%;
+    --foreground: 92 33% 18%;
+
+    --card: 54 85% 91%;
+    --card-foreground: 92 33% 18%;
+
+    --popover: 54 85% 91%;
+    --popover-foreground: 92 33% 18%;
+
+    --primary: 92 33% 18%;
+    --primary-foreground: 54 85% 91%;
+
+    --secondary: 36 88% 60%;
+    --secondary-foreground: 92 33% 18%;
+
+    --muted: 54 85% 88%;
+    --muted-foreground: 92 20% 40%;
+
+    --accent: 36 88% 60%;
+    --accent-foreground: 92 33% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 54 85% 91%;
+
+    --border: 54 60% 85%;
+    --input: 54 60% 85%;
+    --ring: 36 88% 60%;
+
+    /* Brand-specific colors */
+    --creative: 36 88% 60%;
+    --creative-foreground: 92 33% 18%;
+    --brand-dark: 92 33% 18%;
+    --brand-cream: 54 85% 91%;
+    --brand-orange: 36 88% 60%;
+    --brand-brown: 36 89% 31%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(92 33% 18%), hsl(92 33% 25%));
+    --gradient-creative: linear-gradient(135deg, hsl(36 88% 60%), hsl(36 89% 31%));
+    --gradient-hero: linear-gradient(135deg, hsl(92 33% 18%) 0%, hsl(92 33% 25%) 50%, hsl(36 88% 60%) 100%);
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(92 33% 18% / 0.3);
+    --shadow-creative: 0 8px 25px -8px hsl(36 88% 60% / 0.4);
+    --shadow-soft: 0 4px 20px -4px hsl(92 20% 40% / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Fonts */
+    --font-hero: 'Manrope', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+
+  }
+
+  .dark {
+    --background: 92 33% 8%;
+    --foreground: 54 85% 91%;
+
+    --card: 92 33% 12%;
+    --card-foreground: 54 85% 91%;
+
+    --popover: 92 33% 12%;
+    --popover-foreground: 54 85% 91%;
+
+    --primary: 36 88% 60%;
+    --primary-foreground: 92 33% 8%;
+
+    --secondary: 92 33% 18%;
+    --secondary-foreground: 54 85% 91%;
+
+    --muted: 92 33% 15%;
+    --muted-foreground: 54 60% 70%;
+
+    --accent: 36 88% 60%;
+    --accent-foreground: 92 33% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 54 85% 91%;
+
+    --border: 92 33% 18%;
+    --input: 92 33% 18%;
+    --ring: 36 88% 60%;
+
+    --creative: 36 88% 60%;
+    --creative-foreground: 92 33% 8%;
+    --brand-dark: 36 88% 60%;
+    --brand-cream: 92 33% 15%;
+    --brand-orange: 36 88% 60%;
+    --brand-brown: 36 89% 31%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Hero Section Font */
+  .hero-font {
+    font-family: var(--font-hero);
+  }
+}
