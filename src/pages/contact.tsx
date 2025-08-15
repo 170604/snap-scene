@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
             <div className="mt-10">
               <h3 className="text-lg font-bold">Our Offices</h3>
               <p className="mt-2">
-                <strong>Mumbai (MH)</strong>
+                <strong>Bengaluru</strong>
               </p>
               <p>
                 No.1095, 60 feet Road, Upkar Layout, Opposite RTO Office, Bangalore-560091.
