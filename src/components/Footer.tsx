@@ -85,8 +85,8 @@ const Footer = () => {
                 <span>yatishyd363@gmail.com</span>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="h-4 w-4 text-creative mt-1" />
-                <span>Mumbai, Delhi, Bangalore<br />& 37 more cities</span>
+                <MapPin className="h-7 w-7 text-creative mt-1" />
+                <span>No.1095, 60 feet Road,Upkar Layout, Opposite RTO Office, Bangalore-560091.</span>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-primary-foreground/60 text-sm">
-              © 2024 Snaps & Scenes. All rights reserved.
+              © 2025 Snaps & Scenes. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm text-primary-foreground/60">
               <a href="#" className="hover:text-creative transition-colors">Privacy Policy</a>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, Menu } from "lucide-react";
+import { Phone, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   NavigationMenu,
@@ -16,18 +16,20 @@ const Header = () => {
         background: "linear-gradient(to bottom, rgba(43, 59, 49, 0.85), rgba(43, 59, 49, 0))",
       }}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-2">
         <div className="flex items-center">
           {/* Left side: Logo + Nav */}
           <div className="flex items-center space-x-8">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
-              <img
-                src="\assets\1-transparent.png"
-                alt="Snaps & Scenes"
-                className="h-40 w-auto md:h-48 -mt-4" // ✅ Bigger logo
-              />
-            </div>
+            <Link to="/"> {/* 👈 Wrap logo in Link */}
+              <div className="flex items-center space-x-2 cursor-pointer">
+                <img
+                  src="\assets\1-transparent.png"
+                  alt="Snaps & Scenes"
+                  className="h-40 w-auto md:h-48 -mt-6"
+                />
+              </div>
+            </Link>
 
             {/* Navigation Menu */}
             <NavigationMenu className="hidden md:flex">

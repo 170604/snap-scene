@@ -94,18 +94,18 @@ const HeroSection = () => {
       </div>
       {/* Floating Element - Bottom Right */}
       <div className="absolute bottom-10 right-10 hidden lg:block">
-        <div className="bg-background/90 backdrop-blur-sm rounded-2xl p-6 shadow-elegant">
+        <div
+          className="bg-background/90 backdrop-blur-sm rounded-2xl p-6 shadow-elegant 
+          transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
+        >
           <div className="flex items-center space-x-3">
-            {/* Colored Circles */}
             <div className="flex -space-x-2">
               <div className="w-8 h-8 rounded-full bg-creative"></div>
               <div className="w-8 h-8 rounded-full bg-primary"></div>
               <div className="w-8 h-8 rounded-full bg-creative/60"></div>
             </div>
-
-            {/* Text Content */}
             <div>
-              <div className="text-sm font-semibold text-foreground">500k+ Images</div>
+              <div className="text-sm font-semibold">500k+ Images</div>
               <div className="text-xs text-muted-foreground">Delivered digitally</div>
             </div>
           </div>

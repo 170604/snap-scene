@@ -51,8 +51,7 @@ const Contact: React.FC = () => {
                 <strong>Mumbai (MH)</strong>
               </p>
               <p>
-                Management Pvt Ltd, WE WORK SPECTRUM TOWER, Chincoli Bunder
-                Road, Malad West, Mumbai, Mumbai Suburban, Maharashtra, 400064
+                No.1095, 60 feet Road, Upkar Layout, Opposite RTO Office, Bangalore-560091.
               </p>
             </div>
           </div>

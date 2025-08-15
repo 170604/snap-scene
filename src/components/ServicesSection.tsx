@@ -138,7 +138,7 @@ const ServicesSection = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <p className="text-creative text-lg mb-4 font-medium">
-              Your Life, Your Moments, Beautifully Captured.Stories to Cherish
+              Your Life, Your Moments, Beautifully Captured. Stories to Cherish
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
               Occasions To Capture<span className="text-creative">.</span>
