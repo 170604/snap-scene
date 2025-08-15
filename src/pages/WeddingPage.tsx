@@ -3,9 +3,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 const WeddingPage = () => {
   const [activePackage, setActivePackage] = useState<string | null>("grand");
+  const navigate = useNavigate();
 
   const togglePackage = (packageName: string) => {
     setActivePackage((prev) => (prev === packageName ? null : packageName));
@@ -16,7 +18,7 @@ const WeddingPage = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-background">
+      <section className="pt-36 pb-20 bg-background">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6">
             Wedding<span className="text-creative">.</span>
@@ -42,7 +44,11 @@ const WeddingPage = () => {
               <h3 className="text-2xl font-semibold text-primary mb-4">
                 Get Custom Pricing<span className="text-creative">.</span>
               </h3>
-              <Button variant="creative" size="lg">
+              <Button
+                variant="creative"
+                size="lg"
+                onClick={() => navigate("/contact")}
+              >
                 Enquire Now
               </Button>
             </div>
@@ -98,20 +104,29 @@ const WeddingPage = () => {
                 onClick={() => togglePackage(pkg.id)}
               >
                 <CardContent className="p-6">
-                  <h4 className={`text-2xl font-bold ${pkg.color}`}>{pkg.title}</h4>
+                  <h4 className={`text-2xl font-bold ${pkg.color}`}>
+                    {pkg.title}
+                  </h4>
                   {activePackage === pkg.id && (
                     <div className="mt-4">
                       <p className="text-muted-foreground mb-4">{pkg.desc}</p>
                       <div className="flex justify-between mb-4">
-                        <span className="line-through text-sm">{pkg.oldPrice}</span>
-                        <span className="text-3xl font-bold text-primary">{pkg.price}</span>
+                        <span className="line-through text-sm">
+                          {pkg.oldPrice}
+                        </span>
+                        <span className="text-3xl font-bold text-primary">
+                          {pkg.price}
+                        </span>
                       </div>
                       <ul className="space-y-2 text-sm">
                         {pkg.features.map((feature, idx) => (
                           <li key={idx}>• {feature}</li>
                         ))}
                       </ul>
-                      <Button className="mt-4 bg-black text-white hover:bg-black/90">
+                      <Button
+                        className="mt-4 bg-black text-white hover:bg-black/90"
+                        onClick={() => navigate("/contact")}
+                      >
                         Book Now
                       </Button>
                     </div>
@@ -131,14 +146,23 @@ const WeddingPage = () => {
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+              {[
+                "assets/IMG_2230.jpg", 
+                "assets/IMG_1697.jpg",
+                "assets/IMG_1709.jpg",
+                "assets/IMG_1714.jpg",
+                "assets/IMG_1934.jpg",
+                "assets/IMG_1967.jpg",
+                "assets/IMG_1990.jpg",
+                "assets/IMG_2224.jpg"
+              ].map((src, index) => (
                 <div
                   key={index}
                   className="aspect-square bg-warm-gray rounded-lg overflow-hidden"
                 >
                   <img
-                    src={`/lovable-uploads/c69b5ce7-8476-47b1-a75f-8e20d88710dd.png`}
-                    alt={`Wedding inspiration ${index}`}
+                    src={src}
+                    alt={`Wedding inspiration ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
                 </div>

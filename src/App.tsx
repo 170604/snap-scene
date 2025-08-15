@@ -15,6 +15,8 @@ import InteriorPage from "./pages/InteriorPage";
 import ProductPage from "./pages/ProductPage";
 import EventsPage from "./pages/EventsPage";
 import BrandVideoPage from "./pages/BrandVideoPage";
+import SampleShoots from "@/pages/SampleShoots";
+import PreWedding from "@/pages/PreWedding";  
 
 // ✅ Import your Contact page
 import Contact from "./pages/contact"; // make sure file is named Contact.tsx
@@ -39,6 +41,8 @@ const App = () => (
           <Route path="/product" element={<ProductPage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/brand-video" element={<BrandVideoPage />} />
+          <Route path="/sample-shoots" element={<SampleShoots />} />
+          <Route path="/pre-wedding" element={<PreWedding />} />
 
           {/* ✅ Contact route for Book Now button */}
           <Route path="/contact" element={<Contact />} />

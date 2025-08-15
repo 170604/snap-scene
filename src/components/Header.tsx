@@ -13,7 +13,7 @@ const Header = () => {
     <header
       className="absolute top-0 left-0 w-full z-50"
       style={{
-        background: "linear-gradient(to bottom, rgba(43, 59, 49, 0.95), rgba(43, 59, 49, 0))",
+        background: "linear-gradient(to bottom, rgba(43, 59, 49, 0.85), rgba(43, 59, 49, 0))",
       }}
     >
       <div className="container mx-auto px-4 py-4">
@@ -70,11 +70,7 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-4 text-sm">
               <div className="flex items-center space-x-1" style={{ color: "#FDFBD1" }}>
                 <Phone className="h-4 w-4" />
-                <span>+91-80888-87703</span>
-              </div>
-              <div className="flex items-center space-x-1" style={{ color: "#FDFBD1" }}>
-                <Mail className="h-4 w-4" />
-                <span>yatishyd363@gmail.com</span>
+                <span>Contact us</span>
               </div>
             </div>
 

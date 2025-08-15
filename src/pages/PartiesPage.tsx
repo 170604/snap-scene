@@ -3,9 +3,11 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const PartiesPage = () => {
   const [activePackage, setActivePackage] = useState<string | null>(null);
+   const navigate = useNavigate();
 
   const togglePackage = (id: string) => {
     setActivePackage(activePackage === id ? null : id);
@@ -61,13 +63,13 @@ const PartiesPage = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-background text-center">
+     <section className="pt-36 pb-20 bg-background text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6">
             Parties<span className="text-creative">.</span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8">
-            Special occasions demand special attention! Let's click!
+            From Candids to Cheers — We Capture It All.
           </p>
         </div>
       </section>
@@ -87,7 +89,7 @@ const PartiesPage = () => {
             <h3 className="text-2xl font-semibold text-primary mb-4">
               Get Custom Pricing<span className="text-creative">.</span>
             </h3>
-            <Button variant="creative" size="lg">
+            <Button variant="creative" size="lg" onClick={() => navigate("/contact")}>
               Enquire Now
             </Button>
           </div>
@@ -114,7 +116,7 @@ const PartiesPage = () => {
                       ))}
                     </ul>
                     <div>
-                      <Button className="mt-4 bg-black text-white hover:bg-black/90">
+                      <Button className="mt-4 bg-black text-white hover:bg-black/90" onClick={() => navigate("/contact")}>
                         Book Now
                       </Button>
                     </div>

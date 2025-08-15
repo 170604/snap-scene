@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
 
       {/* Main Content */}
       <main className="flex-1">
-        <section className="container mx-auto py-12 px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <section className="container mx-auto pt-36 pb-12 px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Left: Contact Info */}
           <div>
             <h2 className="text-5xl font-extrabold text-gray-900">
@@ -23,14 +23,14 @@ const Contact: React.FC = () => {
             <div className="mt-10">
               <h3 className="text-lg font-bold">CUSTOMER CARE:</h3>
               <p className="mt-2">
-                <strong>Phone:</strong> 7617 25 25 25
+                <strong>Phone:</strong> +91 81092 78683
               </p>
               <p>
-                <strong>Email:</strong> info@vsnapu.com
+                <strong>Email:</strong> contact@snapsandscenes.com
               </p>
               <div className="mt-4">
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/+918109278683"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
