@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Camera, Play, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const videoSrc = "public/videos/WEB_LOOP.mp4"; // ✅ Place your video in public/videos
+const videoSrc = "/videos/WEB_LOOP.mp4"; // ✅ Place your video in public/videos
 
 const HeroSection = () => {
   const navigate = useNavigate();
