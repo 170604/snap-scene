@@ -16,7 +16,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
-              India's premier photography marketplace connecting you with professional photographers across 40+ cities.
+              India’s Trusted Photography Hub — Nationwide Reach.
             </p>
             <div className="flex space-x-4">
               {/* Instagram Redirect */}
