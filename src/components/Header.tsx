@@ -1,19 +1,45 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Menu } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import { useEffect } from "react";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Scroll to section if hash exists
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
+  // Handles redirection to home + scrolling to section
+  const handleNavigate = (hash: string) => {
+    if (location.pathname !== "/") {
+      navigate(`/${hash}`); // redirect to home with hash
+    } else {
+      const section = document.querySelector(hash);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <header
       className="absolute top-0 left-0 w-full z-50"
       style={{
-        background: "linear-gradient(to bottom, rgba(43, 59, 49, 0.85), rgba(43, 59, 49, 0))",
+        background:
+          "linear-gradient(to bottom, rgba(43, 59, 49, 0.85), rgba(43, 59, 49, 0))",
       }}
     >
       <div className="container mx-auto px-4 py-2">
@@ -21,7 +47,7 @@ const Header = () => {
           {/* Left side: Logo + Nav */}
           <div className="flex items-center space-x-8">
             {/* Logo */}
-            <Link to="/"> {/* 👈 Wrap logo in Link */}
+            <Link to="/">
               <div className="flex items-center space-x-2 cursor-pointer">
                 <img
                   src="\assets\1-transparent.png"
@@ -35,33 +61,33 @@ const Header = () => {
             <NavigationMenu className="hidden md:flex">
               <NavigationMenuList className="space-x-6">
                 <NavigationMenuItem>
-                  <NavigationMenuLink
-                    href="/#home"
+                  <button
+                    onClick={() => handleNavigate("#home")}
                     className="hover:text-creative transition-colors font-medium"
                     style={{ color: "#FDFBD1" }}
                   >
                     Home
-                  </NavigationMenuLink>
+                  </button>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink
-                    href="#occasions"
+                  <button
+                    onClick={() => handleNavigate("#occasions")}
                     className="hover:text-creative transition-colors font-medium"
                     style={{ color: "#FDFBD1" }}
                   >
                     Occasions
-                  </NavigationMenuLink>
+                  </button>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink
-                    href="#business"
+                  <button
+                    onClick={() => handleNavigate("#business")}
                     className="hover:text-creative transition-colors font-medium"
                     style={{ color: "#FDFBD1" }}
                   >
                     Business
-                  </NavigationMenuLink>
+                  </button>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -70,9 +96,12 @@ const Header = () => {
           {/* Right side: Contact info + Buttons */}
           <div className="flex items-center space-x-4 ml-auto">
             <div className="hidden lg:flex items-center space-x-4 text-sm">
-              <div className="flex items-center space-x-1" style={{ color: "#FDFBD1" }}>
+              <div
+                className="flex items-center space-x-1"
+                style={{ color: "#FDFBD1" }}
+              >
                 <Phone className="h-4 w-4" />
-                <span>Contact us</span>
+                <span>91 81092 78683</span>
               </div>
             </div>
 
@@ -90,7 +119,12 @@ const Header = () => {
               </Button>
             </Link>
 
-            <Button variant="ghost" size="icon" className="md:hidden" style={{ color: "#FDFBD1" }}>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              style={{ color: "#FDFBD1" }}
+            >
               <Menu className="h-5 w-5" />
             </Button>
           </div>

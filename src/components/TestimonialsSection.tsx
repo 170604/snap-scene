@@ -4,17 +4,24 @@ import { Star, Heart } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Priyanka Jain",
-    avatar: "/lovable-uploads/dc3b6175-5789-450d-901b-a0c095da2fe3.png",
-    review: "I and my husband had went for post wedding shoot with Snaps & Scenes which had tie up with Hyatt centric... it was a wonderful shoot.. and life time memories... Afsana, adil nester... they were awesome... they made us comfortable before every click and gave there best.",
-    location: "Hyatt Centric, Goa, India",
+    name: "Neha & Rohan",
+    avatar: "/lovable-uploads/rohit.png",
+    review: "We booked Snaps & Scenes for our wedding in Jaipur, and it was the best decision ever! The team was so professional yet friendly, and they captured every emotion perfectly. We look at our album every day and relive those moments.",
+    location: "Jaipur, Rajasthan, India",
     rating: 5
   },
   {
-    name: "Surbhi Jain", 
-    avatar: "/lovable-uploads/dc3b6175-5789-450d-901b-a0c095da2fe3.png",
-    review: "We met Atik in The Leela Goa. He was very kind and dedicated such a beautiful shots with perfect angles. He knew we wanted to get captured. It was an icing on the cake.",
-    location: "The Leela Goa, India",
+    name: "Aarav Malhotra", 
+    avatar: "/lovable-uploads/neha.png",
+    review: "As a corporate client, I needed product shots at scale for our e-commerce brand. Snaps & Scenes delivered on time with world-class quality. The consistency across hundreds of images was outstanding",
+    location: "Bangalore, Karnataka, India",
+    rating: 5
+  },
+  {
+    name: "Simran Kaur", 
+    avatar: "/lovable-uploads/amit-pooja.png",
+    review: "Our maternity shoot was beyond magical. The photographers made me feel so comfortable and the pictures are something I’ll treasure forever.",
+    location: "Delhi NCR, India",
     rating: 5
   }
 ];
@@ -37,27 +44,29 @@ const TestimonialsSection = () => {
           </p>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             People Who<br />
-            Believed In Us<span className="text-creative">.</span>
+            Chose Snaps & Scenes<span className="text-creative">.</span>
           </h2>
           <div className="max-w-2xl mx-auto mb-8">
             <p className="text-primary-foreground/90 text-lg leading-relaxed">
-              Snaps & Scenes is loved <Heart className="inline h-5 w-5 text-red-500 fill-current mx-1" /> by many, in fact all of them who have been with us on their trips. Images are the only way to rewind your memories of the most important moments in your life. Read what People who preserved their memories with us, say 😊
+              Snaps & Scenes is trusted <Heart className="inline h-5 w-5 text-red-500 fill-current mx-1" />by couples, families, and brands across India. Every picture is a story, every frame a memory you’ll cherish for years. Here’s what our happy clients say about their experiences with us:
             </p>
           </div>
-          <Button variant="destructive" size="lg" className="bg-red-600 hover:bg-red-700">
-            Tripadvisor Reviews
-          </Button>
         </div>
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-muted text-foreground border-0">
+            <Card
+              key={index}
+              className={`bg-muted text-foreground border-0 ${
+                index === 2 ? "md:col-span-2 md:mx-auto max-w-xl" : ""
+              }`}
+            >
               <CardContent className="p-6">
                 {/* User Info */}
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-creative rounded-full flex items-center justify-center text-white font-bold mr-3">
-                    {testimonial.name.split(' ').map(n => n[0]).join('')}
+                    {testimonial.name.split(" ").map((n) => n[0]).join("")}
                   </div>
                   <div>
                     <h4 className="font-semibold text-primary">{testimonial.name}</h4>
@@ -82,16 +91,8 @@ const TestimonialsSection = () => {
             </Card>
           ))}
         </div>
-
-        {/* Shark Tank Section */}
-        <div className="text-center">
-          <div className="inline-flex items-center bg-background/10 rounded-full px-6 py-3">
-            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
-              <span className="text-white text-xs font-bold">IN</span>
-            </div>
-            <span className="text-primary-foreground">INSTAGRAM</span>
-          </div>
-        </div>
+        
+      
       </div>
     </section>
   );

@@ -127,6 +127,7 @@ const MaternityPage = () => {
           ))}
         </section>
 
+      
         {/* Ideas Section */}
         <section className="text-center">
           <h2 className="text-4xl font-bold text-primary mb-4">
@@ -137,14 +138,23 @@ const MaternityPage = () => {
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+            {[
+              "assets/IMG_7001.JPEG",
+              "assets/IMG_7002.JPEG",
+              "assets/IMG_7003.JPEG",
+              "assets/IMG_7005.JPEG",
+              "assets/IMG_7006.JPEG",
+              "assets/IMG_7007.JPEG",
+              "assets/IMG_7008.JPEG",
+              "assets/IMG_7009.JPEG",
+            ].map((image, index) => (
               <div
                 key={index}
                 className="aspect-square bg-warm-gray rounded-lg overflow-hidden"
               >
                 <img
-                  src={`/lovable-uploads/bc8c5d8e-ba1b-49cb-8963-6a78fb7b5087.png`}
-                  alt={`Maternity inspiration ${index}`}
+                  src={image}
+                  alt={`Maternity inspiration ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
               </div>

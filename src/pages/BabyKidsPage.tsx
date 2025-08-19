@@ -137,18 +137,27 @@ const BabyKidsPage = () => {
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
-              <div
-                key={index}
-                className="aspect-square bg-warm-gray rounded-lg overflow-hidden"
-              >
-                <img
-                  src={`/lovable-uploads/5e4221d8-0834-4435-9ac3-27638edaea57.png`}
-                  alt={`Baby & Kids inspiration ${index}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
+          {[
+            "assets/IMG_7013.JPEG",
+            "assets/IMG_7016.JPEG",
+            "assets/IMG_7017.JPEG",
+            "assets/IMG_7018.JPEG",
+            "assets/IMG_7019.JPEG",
+            "assets/IMG_7020.JPEG",
+            "assets/IMG_7021.JPEG",
+            "assets/IMG_7022.JPEG",
+          ].map((image, index) => (
+            <div
+              key={index}
+              className="aspect-square bg-warm-gray rounded-lg overflow-hidden"
+            >
+              <img
+                src={image}
+                alt={`Maternity inspiration ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
           </div>
         </section>
       </main>
