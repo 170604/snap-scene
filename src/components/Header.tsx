@@ -1,169 +1,75 @@
-import { Button } from "@/components/ui/button";
-import { Phone, Menu, X } from "lucide-react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  // Scroll to section if hash exists
-  useEffect(() => {
-    if (location.hash) {
-      const section = document.querySelector(location.hash);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [location]);
-
-  // Handles redirection to home + scrolling to section
-  const handleNavigate = (hash: string) => {
-    setMobileOpen(false); // close mobile menu when clicked
-    if (location.pathname !== "/") {
-      navigate(`/${hash}`); // redirect to home with hash
-    } else {
-      const section = document.querySelector(hash);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header
-      className="absolute top-0 left-0 w-full z-50"
-      style={{
-        background:
-          "linear-gradient(to bottom, rgba(43, 59, 49, 0.85), rgba(43, 59, 49, 0))",
-      }}
-    >
-      <div className="container mx-auto px-4 py-2">
-        <div className="flex items-center">
-          {/* Left side: Logo + Nav */}
-          <div className="flex items-center space-x-8">
-            {/* Logo */}
-            <Link to="/">
-              <div className="flex items-center space-x-2 cursor-pointer">
-                <img
-                  src="\assets\1-transparent.png"
-                  alt="Snaps & Scenes"
-                  className="h-40 w-auto md:h-48 -mt-6"
-                />
-              </div>
-            </Link>
+    <header className="fixed top-0 left-0 w-full z-50 bg-green-900 text-white shadow-md">
+      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="Snaps & Scenes" className="h-12 md:h-14 w-auto" />
+        </Link>
 
-            {/* Desktop Navigation */}
-            <NavigationMenu className="hidden md:flex">
-              <NavigationMenuList className="space-x-6">
-                <NavigationMenuItem>
-                  <button
-                    onClick={() => handleNavigate("#home")}
-                    className="hover:text-creative transition-colors font-medium"
-                    style={{ color: "#FDFBD1" }}
-                  >
-                    Home
-                  </button>
-                </NavigationMenuItem>
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex space-x-8 text-lg font-medium">
+          <Link to="/" className="hover:text-yellow-300 transition">Home</Link>
+          <a href="#occasions" className="hover:text-yellow-300 transition">Occasions</a>
+          <a href="#business" className="hover:text-yellow-300 transition">Business</a>
+          <Link to="/contact" className="bg-yellow-400 text-black px-4 py-2 rounded-xl hover:bg-yellow-500 transition">
+            Book Now
+          </Link>
+        </nav>
 
-                <NavigationMenuItem>
-                  <button
-                    onClick={() => handleNavigate("#occasions")}
-                    className="hover:text-creative transition-colors font-medium"
-                    style={{ color: "#FDFBD1" }}
-                  >
-                    Occasions
-                  </button>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <button
-                    onClick={() => handleNavigate("#business")}
-                    className="hover:text-creative transition-colors font-medium"
-                    style={{ color: "#FDFBD1" }}
-                  >
-                    Business
-                  </button>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
-
-          {/* Right side: Contact info + Buttons */}
-          <div className="flex items-center space-x-4 ml-auto">
-            <div className="hidden lg:flex items-center space-x-4 text-sm">
-              <div
-                className="flex items-center space-x-1"
-                style={{ color: "#FDFBD1" }}
-              >
-                <Phone className="h-4 w-4" />
-                <span>91 81092 78683</span>
-              </div>
-            </div>
-
-            {/* Book Now navigates to /contact */}
-            <Link to="/contact">
-              <Button
-                variant="hero"
-                className="hidden md:inline-flex"
-                style={{
-                  color: "#FDFBD1",
-                  borderColor: "#FDFBD1",
-                }}
-              >
-                Book Now
-              </Button>
-            </Link>
-
-            {/* Mobile Hamburger */}
-            <button
-              className="md:hidden text-white"
-              onClick={() => setMobileOpen(!mobileOpen)}
-            >
-              {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
-        </div>
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={30} /> : <Menu size={30} />}
+        </button>
       </div>
 
-      {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-[#2B3B31] bg-opacity-95 text-[#FDFBD1] px-6 py-4 space-y-4">
-          <button
-            onClick={() => handleNavigate("#home")}
-            className="block w-full text-left font-medium hover:text-creative"
+      {/* Mobile Dropdown */}
+      <div
+        className={`absolute top-20 right-4 left-4 rounded-2xl shadow-xl bg-green-800 text-white overflow-hidden transform transition-all duration-500 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <nav className="flex flex-col items-center space-y-6 py-6 text-lg font-semibold">
+          <Link
+            to="/"
+            className="hover:text-yellow-300 transition"
+            onClick={() => setIsOpen(false)}
           >
             Home
-          </button>
-          <button
-            onClick={() => handleNavigate("#occasions")}
-            className="block w-full text-left font-medium hover:text-creative"
+          </Link>
+          <a
+            href="#occasions"
+            className="hover:text-yellow-300 transition"
+            onClick={() => setIsOpen(false)}
           >
             Occasions
-          </button>
-          <button
-            onClick={() => handleNavigate("#business")}
-            className="block w-full text-left font-medium hover:text-creative"
+          </a>
+          <a
+            href="#business"
+            className="hover:text-yellow-300 transition"
+            onClick={() => setIsOpen(false)}
           >
             Business
-          </button>
-          <Link to="/contact" onClick={() => setMobileOpen(false)}>
-            <Button
-              variant="hero"
-              className="w-full mt-2"
-              style={{ color: "#FDFBD1", borderColor: "#FDFBD1" }}
-            >
-              Book Now
-            </Button>
+          </a>
+          <Link
+            to="/contact"
+            className="bg-yellow-400 text-black px-6 py-2 rounded-xl hover:bg-yellow-500 transition"
+            onClick={() => setIsOpen(false)}
+          >
+            Book Now
           </Link>
-        </div>
-      )}
+        </nav>
+      </div>
     </header>
   );
 };
