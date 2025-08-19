@@ -1,16 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Menu } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   // Scroll to section if hash exists
   useEffect(() => {
@@ -24,6 +25,7 @@ const Header = () => {
 
   // Handles redirection to home + scrolling to section
   const handleNavigate = (hash: string) => {
+    setMobileOpen(false); // close mobile menu when clicked
     if (location.pathname !== "/") {
       navigate(`/${hash}`); // redirect to home with hash
     } else {
@@ -57,7 +59,7 @@ const Header = () => {
               </div>
             </Link>
 
-            {/* Navigation Menu */}
+            {/* Desktop Navigation */}
             <NavigationMenu className="hidden md:flex">
               <NavigationMenuList className="space-x-6">
                 <NavigationMenuItem>
@@ -119,17 +121,49 @@ const Header = () => {
               </Button>
             </Link>
 
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-              style={{ color: "#FDFBD1" }}
+            {/* Mobile Hamburger */}
+            <button
+              className="md:hidden text-white"
+              onClick={() => setMobileOpen(!mobileOpen)}
             >
-              <Menu className="h-5 w-5" />
-            </Button>
+              {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileOpen && (
+        <div className="md:hidden bg-[#2B3B31] bg-opacity-95 text-[#FDFBD1] px-6 py-4 space-y-4">
+          <button
+            onClick={() => handleNavigate("#home")}
+            className="block w-full text-left font-medium hover:text-creative"
+          >
+            Home
+          </button>
+          <button
+            onClick={() => handleNavigate("#occasions")}
+            className="block w-full text-left font-medium hover:text-creative"
+          >
+            Occasions
+          </button>
+          <button
+            onClick={() => handleNavigate("#business")}
+            className="block w-full text-left font-medium hover:text-creative"
+          >
+            Business
+          </button>
+          <Link to="/contact" onClick={() => setMobileOpen(false)}>
+            <Button
+              variant="hero"
+              className="w-full mt-2"
+              style={{ color: "#FDFBD1", borderColor: "#FDFBD1" }}
+            >
+              Book Now
+            </Button>
+          </Link>
+        </div>
+      )}
     </header>
   );
 };

@@ -68,16 +68,16 @@ const Footer = () => {
               <li>
                 Email:{" "}
                 <a href="mailto:info@snapsnscenes.com" className="hover:text-creative">
-                  info@snapsnscenes.com
+                  contact@snapsandscenes.com
                 </a>
               </li>
               <li>
                 Phone:{" "}
                 <a href="tel:+911234567890" className="hover:text-creative">
-                  +91 1234567890
+                  +91 81092 78683
                 </a>
               </li>
-              <li>Address: 123 Studio Lane, Mumbai, India</li>
+              <li>Address: No.1095, 60 feet Road, Upkar Layout, Opposite RTO Office,Bangalore-56009</li>
             </ul>
           </div>
         </div>
