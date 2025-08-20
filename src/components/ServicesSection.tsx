@@ -22,7 +22,7 @@ const occasionsToCapture = [
     icon: Heart,
     title: "Wedding",
     description: "Turning Your Big Day into Timeless Memories.",
-    image: "/lovable-uploads/c69b5ce7-8476-47b1-a75f-8e20d88710dd.png",
+    image: "assets/IMG_1934.jpg",
     category: "occasions",
     route: "/wedding",
   },
@@ -40,7 +40,7 @@ const occasionsToCapture = [
     title: "Baby & Kids",
     description:
       "From First Smile to First Steps — Captured Forever.",
-    image: "/lovable-uploads/5e4221d8-0834-4435-9ac3-27638edaea57.png",
+    image: "assets/IMG_7013.JPEG",
     category: "occasions",
     route: "/baby-kids",
   },
@@ -49,7 +49,7 @@ const occasionsToCapture = [
     title: "Maternity",
     description:
       "Preserve the happiness of motherhood with some lovely pictures.",
-    image: "/lovable-uploads/bc8c5d8e-ba1b-49cb-8963-6a78fb7b5087.png",
+    image: "assets/IMG_7002.JPEG",
     category: "occasions",
     route: "/maternity",
   },

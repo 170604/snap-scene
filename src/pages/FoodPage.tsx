@@ -63,12 +63,17 @@ const FoodPage = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-36 pb-20a bg-background text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+      <section
+        className="py-32 bg-cover bg-center text-center relative"
+        style={{ backgroundImage: "url('assets/spices.jpg')" }} // 🔥 Replace with your image path
+      >
+        <div className="absolute inset-0 bg-black/40"></div> {/* overlay for text readability */}
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Food<span className="text-creative">.</span>
           </h1>
-          <p className="text-lg text-muted-foreground mb-8">
+           <p className="text-lg text-gray-200 mb-8">
             You are able to taste a picture they say!
           </p>
         </div>
@@ -137,19 +142,28 @@ const FoodPage = () => {
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
-              <div
-                key={index}
-                className="aspect-square bg-warm-gray rounded-lg overflow-hidden"
-              >
-                <img
-                  src={`/lovable-uploads/07c333fa-82d6-4f18-b3e4-c1dd481719ad.png`}
-                  alt={`Food inspiration ${index}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
+              {[
+                "assets/milk and biscuits on glass.jpg", 
+                "assets/Ragavendra Cafe-2.jpg",
+                "assets/Ragavendra Cafe-36.jpg",
+                "assets/Ragavendra Cafe-42.jpg",
+                "assets/Ragavendra Cafe-48.jpg",
+                "assets/Ragavendra Cafe-66.jpg",
+                "assets/Ragavendra Cafe-72.jpg",
+                "assets/spices.jpg"
+              ].map((src, index) => (
+                <div
+                  key={index}
+                  className="aspect-square bg-warm-gray rounded-lg overflow-hidden"
+                >
+                  <img
+                    src={src}
+                    alt={`Wedding inspiration ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
         </section>
       </main>
 

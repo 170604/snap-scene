@@ -63,16 +63,22 @@ const BabyKidsPage = () => {
       <Header />
 
       {/* Hero Section */}
-     <section className="py-32 bg-background text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+     <section
+        className="py-32 bg-cover bg-center text-center relative"
+        style={{ backgroundImage: "url('assets/IMG_7013.JPEG')" }} // 🔥 Replace with your image path
+      >
+        <div className="absolute inset-0 bg-black/40"></div> {/* overlay for text readability */}
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Baby & Kids<span className="text-creative">.</span>
           </h1>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-lg text-gray-200 mb-8">
             Kids grow up fast, make sure every month is captured for years.
           </p>
         </div>
       </section>
+
 
       {/* Main Content */}
       <main className="flex-1 p-8 max-w-5xl mx-auto">

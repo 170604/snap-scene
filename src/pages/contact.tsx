@@ -1,8 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    type: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("Submitting...");
+
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbxDm_Emrqpyvlgxyn5oztJtQhUDaiF8aIcLq-zJB2X7EVPOnfQ3R6PmfIpDQoGjygA3/exec", // replace with your web app URL
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: JSON.stringify(formData),
+        }
+      );
+
+      setStatus("✅ Your response has been recorded!");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        type: "",
+        message: "",
+      });
+    } catch (error) {
+      setStatus("❌ Failed to submit. Try again.");
+    }
+  };
+
   return (
     <div className="bg-yellow-50 text-gray-800 min-h-screen flex flex-col">
       {/* Site Header */}
@@ -58,7 +102,7 @@ const Contact: React.FC = () => {
 
           {/* Right: Form */}
           <div>
-            <form className="space-y-6 bg-yellow-50">
+            <form className="space-y-6 bg-yellow-50" onSubmit={handleSubmit}>
               <p className="text-red-500 text-sm">
                 * The type field is required.
               </p>
@@ -67,12 +111,18 @@ const Contact: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="First Last"
                   className="border rounded px-3 py-2 w-full"
                   required
                 />
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="name@email.com"
                   className="border rounded px-3 py-2 w-full"
                   required
@@ -82,11 +132,20 @@ const Contact: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="91999xxxxx99"
                   className="border rounded px-3 py-2 w-full"
                   required
                 />
-                <select className="border rounded px-3 py-2 w-full" required>
+                <select
+                  name="type"
+                  value={formData.type}
+                  onChange={handleChange}
+                  className="border rounded px-3 py-2 w-full"
+                  required
+                >
                   <option value="">Select an option</option>
                   <option value="General Query">General Query</option>
                   <option value="Booking">Booking</option>
@@ -95,6 +154,9 @@ const Contact: React.FC = () => {
               </div>
 
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 rows={5}
                 placeholder="Describe your concern in details"
                 className="border rounded px-3 py-2 w-full"
@@ -106,6 +168,8 @@ const Contact: React.FC = () => {
               >
                 Submit
               </button>
+
+              {status && <p className="mt-2 text-sm">{status}</p>}
             </form>
           </div>
         </section>

@@ -63,12 +63,16 @@ const VacationPage = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-36 pb-20 bg-background text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+        <section
+          className="py-32 bg-cover bg-center text-center relative"
+          style={{ backgroundImage: "url('/lovable-uploads/ed39772f-0548-4cc0-b99b-bddc3d81a269.png')" }} // 🔥 Replace with your image path
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Vacation<span className="text-creative">.</span>
           </h1>
-          <p className="text-lg text-muted-foreground mb-8">
+         <p className="text-lg text-gray-200 mb-8">
             Spent a bomb on travel? Freeze the scenes forever!
           </p>
         </div>
