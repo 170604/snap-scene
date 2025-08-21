@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxDm_Emrqpyvlgxyn5oztJtQhUDaiF8aIcLq-zJB2X7EVPOnfQ3R6PmfIpDQoGjygA3/exec", // replace with your web app URL
+        "https://script.google.com/macros/s/AKfycbxrC52odl-5gc0hFQnVR5BiRJbAhzMTb3K6muSTnRBo9IsXJNqe6uztQ0odTOMVhUAY/exec", // replace with your web app URL
         {
           method: "POST",
           mode: "no-cors",
