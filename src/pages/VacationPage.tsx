@@ -15,17 +15,16 @@ const VacationPage = () => {
 
   const packages = [
     {
-      id: "vacation",
-      title: "Vacation Memories",
+      id: "Insta Shoot",
+      title: "Insta Shoot",
       color: "text-blue-600",
-      desc: "Photography + Video + Drone",
-      oldPrice: "₹25000",
-      price: "₹18000",
+      desc: "Photography",
+      oldPrice: "₹6999",
+      price: "₹4999",
       features: [
-        "Full Day Coverage",
-        "1 Photographer + Drone Operator",
-        "200+ Photos + Travel Video + Drone Footage",
-        "Multiple Location Coverage",
+        "1 Hour Photography Session",
+        "1 location",
+        "25 Digital Edited Images",
       ],
     },
     {
@@ -33,13 +32,12 @@ const VacationPage = () => {
       title: "Luxury Vacation",
       color: "text-purple-600",
       desc: "Premium Photography + Cinematic Video + Drone",
-      oldPrice: "₹40000",
-      price: "₹32000",
+      oldPrice: "₹14999",
+      price: "₹11999",
       features: [
-        "2 Days Coverage",
-        "2 Photographers + 1 Drone Operator",
-        "400+ Edited Photos + Cinematic Travel Film",
-        "Premium Locations & Advanced Lighting",
+        "2 Hour Photo + Reel Shoot at 1 Locations",
+        "2 Reel of 30 Sec",
+        "25 Edited Images",
       ],
     },
     {
@@ -47,13 +45,12 @@ const VacationPage = () => {
       title: "Celebrity Vacation",
       color: "text-red-600",
       desc: "All-inclusive Luxury with Full Crew + Special Effects",
-      oldPrice: "₹80000",
-      price: "₹65000",
+      oldPrice: "₹24999",
+      price: "₹21999",
       features: [
-        "Unlimited Days Coverage",
-        "Full Crew + Multiple Drones + Cinematic Directors",
-        "1000+ Edited Photos + Documentary Style Travel Film",
-        "AR/VR Travel Experience + Special Effects",
+        "2 Hour shoot at  1 Locations",
+        "Photography + Videography",
+        "25 Edited Images + 1 Cinematic video upto 1 Minute",
       ],
     },
   ];
