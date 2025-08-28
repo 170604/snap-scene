@@ -54,14 +54,6 @@ const occasionsToCapture = [
     route: "/maternity",
   },
   {
-    icon: PartyPopper,
-    title: "Parties",
-    description: "Special occasions demand special attention! Let's click!",
-    image: "/lovable-uploads/c294df76-a5b5-4e46-9ed0-c1760cfcd09a.png",
-    category: "occasions",
-    route: "/parties",
-  },
-  {
     icon: Plane,
     title: "Vacation",
     description: "Spent a bomb on travel? Freeze the scenes forever!",

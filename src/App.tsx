@@ -8,7 +8,6 @@ import NotFound from "./pages/NotFound";
 import WeddingPage from "./pages/WeddingPage";
 import BabyKidsPage from "./pages/BabyKidsPage";
 import MaternityPage from "./pages/MaternityPage";
-import PartiesPage from "./pages/PartiesPage";
 import VacationPage from "./pages/VacationPage";
 import FoodPage from "./pages/FoodPage";
 import InteriorPage from "./pages/InteriorPage";
@@ -34,7 +33,6 @@ const App = () => (
           <Route path="/wedding" element={<WeddingPage />} />
           <Route path="/baby-kids" element={<BabyKidsPage />} />
           <Route path="/maternity" element={<MaternityPage />} />
-          <Route path="/parties" element={<PartiesPage />} />
           <Route path="/vacation" element={<VacationPage />} />
           <Route path="/food" element={<FoodPage />} />
           <Route path="/interior" element={<InteriorPage />} />
