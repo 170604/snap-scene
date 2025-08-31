@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const PreWeddingPage = () => {
   const [activePackage, setActivePackage] = useState<string | null>("grand");
@@ -15,6 +16,21 @@ const PreWeddingPage = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Pre-Wedding Photography | Snaps & Scenes</title>
+        <meta
+          name="description"
+          content="Romantic pre-wedding photoshoots with cinematic videography. Creative themes, props, and stunning locations."
+        />
+        <meta property="og:title" content="Pre-Wedding Photography | Snaps & Scenes" />
+        <meta property="og:description" content="Capture your love story with cinematic pre-wedding photography." />
+        <meta property="og:image" content="/assets/prewedding-cover.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourdomain.com/prewedding" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/assets/prewedding-cover.jpg" />
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}

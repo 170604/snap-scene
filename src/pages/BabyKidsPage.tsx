@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const BabyKidsPage = () => {
   const [activePackage, setActivePackage] = useState<string | null>(null);
@@ -57,6 +58,21 @@ const BabyKidsPage = () => {
 
   return (
     <div className="min-h-screen">
+    <Helmet>
+      <title>Baby & Kids Photography | Snaps & Scenes</title>
+      <meta
+        name="description"
+        content="Capture every milestone with professional baby & kids photography. Cute, creative, and timeless family portraits."
+      />
+      <meta property="og:title" content="Baby & Kids Photography | Snaps & Scenes" />
+      <meta property="og:description" content="Professional baby & kids photoshoots to cherish every memory." />
+      <meta property="og:image" content="/assets/babykids-cover.jpg" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://yourdomain.com/babykids" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content="/assets/babykids-cover.jpg" />
+    </Helmet>
+
       <Header />
 
       {/* Hero Section */}

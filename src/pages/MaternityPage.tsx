@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";   
+import { Helmet } from "react-helmet";
 
 const MaternityPage = () => {
   const [activePackage, setActivePackage] = useState<string | null>(null);
@@ -58,6 +59,21 @@ const MaternityPage = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Maternity Photography | Snaps & Scenes</title>
+        <meta
+          name="description"
+          content="Celebrate motherhood with beautiful maternity photography. Creative themes, gowns, and cinematic memories."
+        />
+        <meta property="og:title" content="Maternity Photography | Snaps & Scenes" />
+        <meta property="og:description" content="Capture the glow of motherhood with maternity photoshoots." />
+        <meta property="og:image" content="/assets/maternity-cover.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourdomain.com/maternity" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/assets/maternity-cover.jpg" />
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}

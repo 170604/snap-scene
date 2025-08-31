@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -49,6 +50,21 @@ const Contact: React.FC = () => {
 
   return (
     <div className="bg-yellow-50 text-gray-800 min-h-screen flex flex-col">
+      <Helmet>
+        <title>Contact Snaps & Scenes | Photography & Videography</title>
+        <meta
+          name="description"
+          content="Get in touch with Snaps & Scenes for photography & videography bookings. Weddings, maternity, kids, corporate, and more."
+        />
+        <meta property="og:title" content="Contact Snaps & Scenes" />
+        <meta property="og:description" content="Book your photography & videography services with Snaps & Scenes." />
+        <meta property="og:image" content="/assets/contact-cover.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourdomain.com/contact" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/assets/contact-cover.jpg" />
+      </Helmet>
+
       {/* Site Header */}
       <Header />
 
