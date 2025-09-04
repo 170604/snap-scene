@@ -14,7 +14,11 @@ const Contact: React.FC = () => {
 
   const [status, setStatus] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -26,8 +30,8 @@ const Contact: React.FC = () => {
     setStatus("Submitting...");
 
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxrC52odl-5gc0hFQnVR5BiRJbAhzMTb3K6muSTnRBo9IsXJNqe6uztQ0odTOMVhUAY/exec", // replace with your web app URL
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxrC52odl-5gc0hFQnVR5BiRJbAhzMTb3K6muSTnRBo9IsXJNqe6uztQ0odTOMVhUAY/exec",
         {
           method: "POST",
           mode: "no-cors",
@@ -57,7 +61,10 @@ const Contact: React.FC = () => {
           content="Get in touch with Snaps & Scenes for photography & videography bookings. Weddings, maternity, kids, corporate, and more."
         />
         <meta property="og:title" content="Contact Snaps & Scenes" />
-        <meta property="og:description" content="Book your photography & videography services with Snaps & Scenes." />
+        <meta
+          property="og:description"
+          content="Book your photography & videography services with Snaps & Scenes."
+        />
         <meta property="og:image" content="/assets/contact-cover.jpg" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://yourdomain.com/contact" />
@@ -83,10 +90,19 @@ const Contact: React.FC = () => {
             <div className="mt-10">
               <h3 className="text-lg font-bold">CUSTOMER CARE:</h3>
               <p className="mt-2">
-                <strong>Phone:</strong> +91 81092 78683
+                <strong>Phone:</strong>{" "}
+                <a href="tel:+918123840037" className="text-blue-600 underline">
+                  +91 81238 40037
+                </a>
               </p>
               <p>
-                <strong>Email:</strong> contact@snapsandscenes.com
+                <strong>Email:</strong>{" "}
+                <a
+                  href="mailto:contact@snapsandscenes.com"
+                  className="text-blue-600 underline"
+                >
+                  contact@snapsandscenes.com
+                </a>
               </p>
               <div className="mt-4">
                 <a
@@ -111,7 +127,8 @@ const Contact: React.FC = () => {
                 <strong>Bengaluru</strong>
               </p>
               <p>
-                No.1095, 60 feet Road, Upkar Layout, Opposite RTO Office, Bangalore-560091.
+                No.1095, 60 feet Road, Upkar Layout, Opposite RTO Office,
+                Bangalore-560091.
               </p>
             </div>
           </div>
