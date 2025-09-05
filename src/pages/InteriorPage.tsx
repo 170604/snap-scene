@@ -82,10 +82,10 @@ const InteriorPage = () => {
         {/* Pricing Plans Section */}
         <section className="mb-16 text-center">
           <h2 className="text-4xl font-bold text-primary mb-4">
-            Pricing Plans<span className="text-creative">.</span>
+            Deals you'll Love<span className="text-creative">.</span>
           </h2>
           <p className="text-muted-foreground mb-8">
-            Showcase your interiors with stunning photography. 100% refunds on cancellation within 48 hrs of booking*.
+            Cancel anytime, stress-free refunds..
           </p>
 
           <div className="mb-8">

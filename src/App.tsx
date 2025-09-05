@@ -17,6 +17,7 @@ import BrandVideoPage from "./pages/BrandVideoPage";
 import SampleShoots from "@/pages/SampleShoots";
 import PreWedding from "@/pages/PreWedding";  
 import EventPhotographersIndia from "@/pages/EventPhotographersIndia";
+import ScrollToTop from "./components/ScrollToTop";
 
 // ✅ Import your Contact page
 import Contact from "./pages/contact"; // make sure file is named Contact.tsx
@@ -29,6 +30,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/wedding" element={<WeddingPage />} />

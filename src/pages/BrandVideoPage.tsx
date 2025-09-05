@@ -33,8 +33,8 @@ const BrandVideoPage = () => {
       title: "Photo + Video Package",
       color: "text-green-600",
       desc: "Photo + Video",
-      oldPrice: "₹85000",
-      price: "₹49999",
+      oldPrice: "₹85,000",
+      price: "₹49,999",
       features: [
         "20 Brand Photos",
         "2-3 Minutes Cinematic Video of Brand  Including bites from Founder's / Directors / Employees / Custome",
@@ -47,8 +47,8 @@ const BrandVideoPage = () => {
       title: "Premium Video Package",
       color: "text-red-600",
       desc: "Full cinematic brand film",
-      oldPrice: "₹1500000",
-      price: "₹99999",
+      oldPrice: "₹15,00,000",
+      price: "₹99,999",
       features: [
         "50 Brand Photos",
         "2-3 Minutes Cinematic Video of Brand Including bites from Founder's / Directors / Employees / Customer",
@@ -79,10 +79,10 @@ const BrandVideoPage = () => {
         {/* Pricing Plans Section */}
         <section className="mb-16 text-center">
           <h2 className="text-4xl font-bold text-primary mb-4">
-            Pricing Plans<span className="text-creative">.</span>
+            Deals You'll Love<span className="text-creative">.</span>
           </h2>
           <p className="text-muted-foreground mb-8">
-            Professional brand videos that tell your story effectively. 100% refunds on cancellation within 48 hrs of booking*.
+            Cancel anytime, stress-free refunds..
           </p>
 
           <div className="mb-8">

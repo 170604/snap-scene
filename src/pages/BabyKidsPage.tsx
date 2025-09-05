@@ -20,8 +20,8 @@ const BabyKidsPage = () => {
       title: "Insta Shoot",
       color: "text-blue-600",
       desc: "Photography",
-      oldPrice: "₹29000",
-      price: "₹17999",
+      oldPrice: "₹29,000",
+      price: "₹17,999",
       features: [
         "2 Setups & 2 Dress Changes with 2 hours of shoot",
         "12 Edited Baby Images",
@@ -33,8 +33,8 @@ const BabyKidsPage = () => {
       title: "Luxury Shoot",
       color: "text-pink-600",
       desc: "Birthday Event Photography",
-      oldPrice: "₹39999",
-      price: "₹29999",
+      oldPrice: "₹39,999",
+      price: "₹29,999",
       features: [
         "3 Setup & Dress Changes with 3 hours of Shoot",
         "30 Edited Images of Baby + 3 Reels of 30 sec Each",
@@ -46,8 +46,8 @@ const BabyKidsPage = () => {
       title: "Milestone Package",
       color: "text-green-600",
       desc: "Monthly Baby Growth Shoots",
-      oldPrice: "₹59999",
-      price: "₹44999",
+      oldPrice: "₹59,1999",
+      price: "₹44,999",
       features: [
         "3 Theme Based Setup & Dress Change with 6 hours of Shoot",
         "35 Edited Images of the Baby, Siblings & Parents + 3 reels of 30 sec each Cake Smash",
@@ -98,10 +98,10 @@ const BabyKidsPage = () => {
         {/* Pricing Plans Section */}
         <section className="mb-15 text-center">
           <h2 className="text-4xl font-bold text-primary mb-4">
-            Pricing Plans<span className="text-creative">.</span>
+            Deals You'll Love<span className="text-creative">.</span>
           </h2>
           <p className="text-muted-foreground mb-8">
-            Capture precious moments at affordable prices. 100% refunds on cancellation within 48 hrs of booking*.
+            Cancel anytime, stress-free refunds..
           </p>
 
           <div className="mb-8">
