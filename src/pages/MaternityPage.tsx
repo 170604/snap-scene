@@ -20,8 +20,8 @@ const MaternityPage = () => {
       title: "Insta Mom Shoot",
       color: "text-blue-600",
       desc: "Photography Only",
-      oldPrice: "₹27999",
-      price: "₹17999",
+      oldPrice: "₹27,999",
+      price: "₹17,999",
       features: [
         "1 Location",
         "Upto 2 Dress change in 2 hours of Shoot  ",
@@ -33,8 +33,8 @@ const MaternityPage = () => {
       title: "Luxury Maternity Package",
       color: "text-purple-600",
       desc: "Photo + Reels + Dress Styling",
-      oldPrice: "₹39999",
-      price: "₹29999",
+      oldPrice: "₹39,999",
+      price: "₹29,999",
       features: [
         "4 Hour Session",
         "35 Edited Images+ 2 Reels of 30 sec Each",
@@ -46,8 +46,8 @@ const MaternityPage = () => {
       title: "Celebrity Maternity Experience",
       color: "text-red-600",
       desc: "Photo + Reels + Dress Styling",
-      oldPrice: "₹59999",
-      price: "₹44999",
+      oldPrice: "₹59,999",
+      price: "₹44,999",
       features: [
         "2 Creative Setups & upto 4 Hours of Shoot",
         "2 Maternity Dresses Included",

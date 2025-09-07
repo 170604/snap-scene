@@ -19,8 +19,8 @@ const EventsPage = () => {
       title: "Half-Day Event Package",
       color: "text-blue-600",
       desc: "Photography Only",
-      oldPrice: "₹19999",
-      price: "₹14999",
+      oldPrice: "₹19,999",
+      price: "₹14,999",
       features: [
         "4 Hour Photography",
         "Upto 150 Edited Images",
@@ -31,8 +31,8 @@ const EventsPage = () => {
       title: "Half-Day Event + Video Package",
       color: "text-green-600",
       desc: "Photography + Video",
-      oldPrice: "₹30000",
-      price: "₹24999",
+      oldPrice: "₹30,000",
+      price: "₹24,999",
       features: [
         "4 Hour Photography",
         "Upto 150 Edited Images",
@@ -44,8 +44,8 @@ const EventsPage = () => {
       title: "Full-Day Premium Package",
       color: "text-red-600",
       desc: "Full Event Photography &  Video",
-      oldPrice: "₹44999",
-      price: "₹39999",
+      oldPrice: "₹44,999",
+      price: "₹39,999",
       features: [
         "8 Hour Photography",
         "Upto 150 Edited Images",

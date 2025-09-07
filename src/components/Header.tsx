@@ -13,7 +13,6 @@ const Header = () => {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  // Scroll to section if hash exists
   useEffect(() => {
     if (location.hash) {
       const section = document.querySelector(location.hash);
@@ -23,11 +22,10 @@ const Header = () => {
     }
   }, [location]);
 
-  // Handles redirection to home + scrolling to section
   const handleNavigate = (hash: string) => {
-    setMobileOpen(false); // close mobile menu when clicked
+    setMobileOpen(false);
     if (location.pathname !== "/") {
-      navigate(`/${hash}`); // redirect to home with hash
+      navigate(`/${hash}`);
     } else {
       const section = document.querySelector(hash);
       if (section) {
@@ -46,67 +44,62 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center">
-          {/* Left side: Logo + Nav */}
-          <div className="flex items-center space-x-8">
-            <Link to="/">
-              <div className="flex items-center space-x-2 cursor-pointer">
-                <img
-                  src="/assets/1-transparent.png"
-                  alt="Snaps & Scenes"
-                  className="h-40 w-auto md:h-48 -mt-6"
-                />
-              </div>
-            </Link>
+          {/* Logo */}
+          <Link to="/">
+            <div className="flex items-center space-x-2 cursor-pointer">
+              <img
+                src="/assets/1-transparent.png"
+                alt="Snaps & Scenes"
+                className="h-40 w-auto md:h-48 -mt-6"
+              />
+            </div>
+          </Link>
 
-            {/* Desktop Navigation */}
-            <NavigationMenu className="hidden md:flex">
-              <NavigationMenuList className="space-x-6">
-                <NavigationMenuItem>
-                  <button
-                    onClick={() => handleNavigate("#home")}
-                    className="hover:text-creative transition-colors font-medium"
-                    style={{ color: "#FDFBD1" }}
-                  >
-                    Home
-                  </button>
-                </NavigationMenuItem>
+          {/* Desktop Navigation */}
+          <NavigationMenu className="hidden md:flex ml-8">
+            <NavigationMenuList className="space-x-6">
+              <NavigationMenuItem>
+                <button
+                  onClick={() => handleNavigate("#home")}
+                  className="hover:text-creative transition-colors font-medium"
+                  style={{ color: "#FDFBD1" }}
+                >
+                  Home
+                </button>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <button
+                  onClick={() => handleNavigate("#occasions")}
+                  className="hover:text-creative transition-colors font-medium"
+                  style={{ color: "#FDFBD1" }}
+                >
+                  Occasions
+                </button>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <button
+                  onClick={() => handleNavigate("#business")}
+                  className="hover:text-creative transition-colors font-medium"
+                  style={{ color: "#FDFBD1" }}
+                >
+                  Business
+                </button>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
-                <NavigationMenuItem>
-                  <button
-                    onClick={() => handleNavigate("#occasions")}
-                    className="hover:text-creative transition-colors font-medium"
-                    style={{ color: "#FDFBD1" }}
-                  >
-                    Occasions
-                  </button>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <button
-                    onClick={() => handleNavigate("#business")}
-                    className="hover:text-creative transition-colors font-medium"
-                    style={{ color: "#FDFBD1" }}
-                  >
-                    Business
-                  </button>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
-
-          {/* Right side: Contact info + Buttons */}
+          {/* Right Side */}
           <div className="flex items-center space-x-4 ml-auto">
-            <div className="hidden lg:flex items-center space-x-4 text-sm">
-              <div
-                className="flex items-center space-x-1"
-                style={{ color: "#FDFBD1" }}
-              >
-                <Phone className="h-4 w-4" />
-                <span>91 81092 78683</span>
-              </div>
+            <div
+              className="hidden lg:flex items-center space-x-1 text-sm"
+              style={{ color: "#FDFBD1" }}
+            >
+              <Phone className="h-4 w-4" />
+              <a href="tel:+918123840037" className="hover:underline">
+                +91 81238 40037
+              </a>
             </div>
 
-            {/* Book Now navigates to /contact */}
             <Link to="/contact">
               <Button
                 variant="hero"
@@ -131,7 +124,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Sliding Drawer Menu */}
+      {/* Mobile Drawer */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-[#2B3B31] text-[#FDFBD1] transform ${
           mobileOpen ? "translate-x-0" : "translate-x-full"

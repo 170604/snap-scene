@@ -74,7 +74,7 @@ const Footer = () => {
               <li>
                 Phone:{" "}
                 <a href="tel:+911234567890" className="hover:text-creative">
-                  +91 81092 78683
+                  +91 81238 40037
                 </a>
               </li>
               <li>Address: No.1095, 60 feet Road, Upkar Layout, Opposite RTO Office,Bangalore-56009</li>

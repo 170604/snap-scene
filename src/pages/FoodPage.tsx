@@ -19,8 +19,8 @@ const FoodPage = () => {
       title: "Insta Food Shoot",
       color: "text-blue-600",
       desc: "Professional Food Photography",
-      oldPrice: "₹16999",
-      price: "₹14999",
+      oldPrice: "₹16,999",
+      price: "₹14,999",
       features: [
         "15 Dishes - Styling and Photoshoot",
         "3 Shots per dish. Top Angle / Inclined/ Zero Angle",
@@ -33,8 +33,8 @@ const FoodPage = () => {
       title: "Luxury Food Shoot",
       color: "text-green-600",
       desc: "Casual & Lifestyle Food Photography",
-      oldPrice: "₹29999",
-      price: "₹24999",
+      oldPrice: "₹29,999",
+      price: "₹24,999",
       features: [
         "15 Dishes",
         "15 Interior Photographs",
@@ -47,8 +47,8 @@ const FoodPage = () => {
       title: "Premium Food & Beverage Package",
       color: "text-red-600",
       desc: "High-End Food Photography + Video",
-      oldPrice: "₹54999",
-      price: "₹49999",
+      oldPrice: "₹54,999",
+      price: "₹49,999",
       features: [
         "15 Dishes",
         "15 Interior Photographs",

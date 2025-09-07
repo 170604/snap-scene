@@ -19,8 +19,8 @@ const VacationPage = () => {
       title: "Insta Shoot",
       color: "text-blue-600",
       desc: "Photography",
-      oldPrice: "₹6999",
-      price: "₹4999",
+      oldPrice: "₹6,999",
+      price: "₹4,999",
       features: [
         "1 Hour Photography Session",
         "1 location",
@@ -32,8 +32,8 @@ const VacationPage = () => {
       title: "Luxury Vacation",
       color: "text-purple-600",
       desc: "Premium Photography + Cinematic Video + Drone",
-      oldPrice: "₹14999",
-      price: "₹11999",
+      oldPrice: "₹14,999",
+      price: "₹11,999",
       features: [
         "2 Hour Photo + Reel Shoot at 1 Locations",
         "2 Reel of 30 Sec",
@@ -45,8 +45,8 @@ const VacationPage = () => {
       title: "Celebrity Vacation",
       color: "text-red-600",
       desc: "All-inclusive Luxury with Full Crew + Special Effects",
-      oldPrice: "₹24999",
-      price: "₹21999",
+      oldPrice: "₹24,999",
+      price: "₹21,999",
       features: [
         "2 Hour shoot at  1 Locations",
         "Photography + Videography",

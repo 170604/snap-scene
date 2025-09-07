@@ -81,7 +81,7 @@
                   color: "text-blue-600",
                   desc: "Photography + Video + Drone",
                   oldPrice: "₹200000",
-                  price: "₹150000",
+                  price: "₹1,50,000",
                   features: [
                     "3 Functions - 4 Member Team",
                     "1 Traditional + 1 Candid Photographer, 1 Traditional + 1 Cinematic Videographer",
@@ -94,8 +94,8 @@
                   title: "Luxury Package",
                   color: "text-purple-600",
                   desc: "Premium Photography + 4K Cinematic Video + Drone",
-                  oldPrice: "₹300000",
-                  price: "₹250000",
+                  oldPrice: "₹3,00,000",
+                  price: "₹2,50,000",
                   features: [
                     "5 Functions - 6 Member Team",
                     "2 Candid Photographers, 1 Cinematic Videographers, 1 Traditional Photographer",
@@ -108,8 +108,8 @@
                   title: "Celebrity Package",
                   color: "text-red-600",
                   desc: "All-inclusive Luxury with Multiple Crews + Special Effects",
-                  oldPrice: "₹400000",
-                  price: "₹350000",
+                  oldPrice: "₹4,00,000",
+                  price: "₹3,50,000",
                   features: [
                     "7 Functions - 6 Member Team",
                     "1 Traditional + 2 Candid Photographer, 1 Traditional + 2 Cinematic Videographer",

@@ -77,8 +77,8 @@ const PreWeddingPage = () => {
                 title: "PreWedding",
                 color: "text-blue-600",
                 desc: "Photography Only",
-                oldPrice: "₹16999",
-                price: "₹15999",
+                oldPrice: "₹16,999",
+                price: "₹15,999",
                 features: [
                   "25 Edited images",
                   "4 hours shoot, 2 locations & 2 Dress Changes",
@@ -90,8 +90,8 @@ const PreWeddingPage = () => {
                 title: "Luxury Package",
                 color: "text-purple-600",
                 desc: "Premium Photography + Videography",
-                oldPrice: "₹35999",
-                price: "₹33999",
+                oldPrice: "₹35,999",
+                price: "₹33,999",
                 features: [
                   "35 Edited images",
                   "2-3 Minute Highlight Film",
@@ -103,8 +103,8 @@ const PreWeddingPage = () => {
                 title: "Celebrity Package",
                 color: "text-red-600",
                 desc: "Photography + Videography + Drone",
-                oldPrice: "₹49999",
-                price: "₹43999",
+                oldPrice: "₹49,999",
+                price: "₹43,999",
                 features: [
                   "35 Edited images",
                   "2-3 Minute Highlight Film",
@@ -117,8 +117,8 @@ const PreWeddingPage = () => {
                 title: "Premium Package",
                 color: "text-red-600",
                 desc: "photography + Videography + Drone ",
-                oldPrice: "₹64999",
-                price: "₹59999",
+                oldPrice: "₹64,999",
+                price: "₹59,999",
                 features: [
                   "35 Edited images",
                   "2-3 Minute Highlight Film",
@@ -177,7 +177,7 @@ const PreWeddingPage = () => {
                 "assets/lonavala (25).jpg",
                 "assets/lonavala (43).jpg",
                 "assets/lonavala (73).jpg",
-                "assets/ps edit-26.jpg"
+                "assets/IMG_7019.JPEG"
               ].map((src, index) => (
                 <div
                   key={index}

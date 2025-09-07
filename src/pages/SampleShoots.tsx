@@ -3,17 +3,17 @@ import Footer from "@/components/Footer";
 
 const sampleImages = [
   "assets/IMG_1697.jpg",
-  "assets/IMG_1709.jpg",
-  "assets/IMG_1714.jpg",
-  "assets/IMG_1934.jpg",
+  "assets/ps edit-67.jpg",
+  "assets/IMG_7008.JPEG",
+  "assets/IMG_7002.JPEG",
+  "assets/IMG_7019.JPEG",
   "assets/IMG_1967.jpg",
-  "assets/IMG_1990.jpg",
   "assets/IMG_2224.jpg",
   "assets/IMG_2230.jpg",
   "assets/IMG_2241.jpg",
-  "assets/IMG_2257.jpg",
-  "assets/IMG_2264.jpg",
-  "assets/IMG_1709.jpg",
+  "assets/IMG_7021.JPEG",
+  "assets/Ragavendra Cafe-2.jpg",
+  "assets/Ragavendra Cafe-48.jpg",
 ];
 
 const SampleShoots = () => {

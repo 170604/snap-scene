@@ -19,8 +19,8 @@ const ProductPage = () => {
       title: "E-commerce Package",
       color: "text-blue-600",
       desc: "Professional Product Photography",
-      oldPrice: "₹19999",
-      price: "₹14999",
+      oldPrice: "₹19,999",
+      price: "₹14,999",
       features: [
         "Upto 50 Products",
         "White Background & Lifestyle Shots",
@@ -33,8 +33,8 @@ const ProductPage = () => {
       title: "Creative Product Shoot",
       color: "text-purple-600",
       desc: "Premium Styling + High-End Editing",
-      oldPrice: "₹24999",
-      price: "₹19999",
+      oldPrice: "₹24,999",
+      price: "₹19,999",
       features: [
         "Upto 10 Products",
         "2 Styled Shots each",
@@ -47,8 +47,8 @@ const ProductPage = () => {
       title: "Fashion & Lifestyle Package",
       color: "text-red-600",
       desc: "Full Crew  + Model (if needed)",
-      oldPrice: "₹29999",
-      price: "₹23999",
+      oldPrice: "₹29,999",
+      price: "₹23,999",
       features: [
         "Upto 10 Attires",
         "4 Angles and Detailing shot per Apparel ",

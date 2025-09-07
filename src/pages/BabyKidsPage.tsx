@@ -158,7 +158,7 @@ const BabyKidsPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             "assets/IMG_7013.JPEG",
-            "assets/IMG_7016.JPEG",
+            "assets/IMG_7019.JPEG",
             "assets/IMG_7017.JPEG",
             "assets/IMG_7018.JPEG",
             "assets/IMG_7019.JPEG",
