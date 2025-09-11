@@ -143,7 +143,7 @@ const BrandVideoPage = () => {
                 className="aspect-square bg-warm-gray rounded-lg overflow-hidden"
               >
                 <img
-                  src={`/lovable-uploads/c729c332-73ba-47e7-b2df-8ee27670fdc1.png`}
+                  src={`/lovable-uploads/d5f41836-d0cd-4461-a46d-a4e08ffaed36.png`}
                   alt={`Brand video inspiration ${index}`}
                   className="w-full h-full object-cover"
                 />
