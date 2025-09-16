@@ -58,7 +58,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* ✅ Animated Title */}
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
+            className="font-majorant text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
             initial={{ x: -400, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 2, ease: "easeOut" }}
@@ -67,7 +67,7 @@ const HeroSection = () => {
           </motion.h1>
 
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-creative mb-6 leading-tight"
+            className="font-majorant text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-creative leading-tight mb-6"
             initial={{ x: 400, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 2, ease: "easeOut", delay: 0.3 }}
