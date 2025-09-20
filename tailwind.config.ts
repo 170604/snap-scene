@@ -102,8 +102,8 @@ export default {
 				elegant: "0px 10px 25px rgba(0,0,0,0.2)",
 			},
 			fontFamily: {
-				sans: ["Inter", "sans-serif"],
-        		majorant: ["'MajorantTRAIL'", "serif"], // ✅ Added custom font},	
+			majorant: ["MajorantTRIAL", "serif"], // 👈 this matches font-majorant in JSX
+    		body: ["Inter", "sans-serif"],
 			},
 		},
 	},
